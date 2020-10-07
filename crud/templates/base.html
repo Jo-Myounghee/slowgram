@@ -4,7 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/8068875292.js" crossorigin="anonymous"></script>
   <title>Document</title>
+  <style>
+  a { text-decoration:none ; color:#000000}
+  </style>
+  
 </head>
 <body>
   <div class="container">
@@ -26,7 +31,8 @@
         <a href="{% url 'accounts:login' %}" class="btn btn-outline-dark">Login</a>
       {% endif %} {% endcomment %}
       
-    <nav class="navbar navbar-expand-lg navbar-light bg-white p-0">
+    <nav class="navbar navbar-expand-lg p-0" style="background-color: #FDBF50">  
+    {% comment %} navbar-light bg-white  {% endcomment %}
       <a class="navbar-brand" href="{% url 'articles:index' %}">{{ user.username }}님, 안녕하세요!</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -60,6 +66,7 @@
         </ul>
       </div>
     </nav>
+    <br>
     {% block content %}
     {% endblock %}
     {% comment %} </div> {% endcomment %}
